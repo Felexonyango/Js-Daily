@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
 
-</head>
-<body>
-  
-    <script>
 //     /**
 //  * @param {number[]} nums
 //  * @param {number} val
@@ -47,6 +39,4 @@ return nums;
 
 
 console.log(remove([2,3,4,5,5,6,7,4,5,79], 4));
-    </script>
-</body>
-</html>
+  

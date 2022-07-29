@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
 
-</head>
-<body>
-  
-    <script>
 
 function arayNumber(num, length) { 
     var array=[];
@@ -19,6 +11,4 @@ function arayNumber(num, length) {
 
 console.log(arayNumber(5,7))
  
-    </script>
-</body>
-</html>
+   

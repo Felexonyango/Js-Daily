@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
 
-</head>
-<body>
-  
-    <script>
 function rangeNumber(min,max){
     let result =[];
     for(let i=min; i<=max; i++){
@@ -20,6 +12,3 @@ console.log(rangeNumber(3,9))
 
 
  
-    </script>
-</body>
-</html>

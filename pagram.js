@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
 
-</head>
-<body>
-  
-    <script>
 //A pangram is a sentence that contains every single letter of the alphabet at least once.
 
 
@@ -24,6 +16,3 @@ function isPangram(string){
 console.log(isPangram("The quick brown fox jumps over the lazy dog."));
 
  
-    </script>
-</body>
-</html>

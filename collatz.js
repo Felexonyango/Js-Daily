@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-
-</head>
-<body>
-    <input type="number" placeholder="Enter value.." id="Input">
-    <button type="button" onclick="collatz()">Get Value</button>
-    
-    <script>
 
 
 function  collatz(number){
@@ -32,9 +21,3 @@ else{
  }
 } 
  
-// collatz(document.getElementById("Input").value)
- 
- 
-    </script>
-</body>
-</html>

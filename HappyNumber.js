@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
 
-</head>
-<body>
-  
-    <script>
 function happyNumber(num){
 
 if(num !== 1){
@@ -58,6 +50,4 @@ console.log(happyNumber(20));
 // }
 // console.log(happy(19))
  
-    </script>
-</body>
-</html>
+ 

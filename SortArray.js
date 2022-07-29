@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-
-</head>
-<body>
-  
-    <script>
 
 function sortedArray (K,N) {  
      var arr=[];
@@ -22,6 +13,3 @@ function sortedArray (K,N) {
 
 
  
-    </script>
-</body>
-</html>
