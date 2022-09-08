@@ -1,9 +1,23 @@
 
-function sortedArray (K,N) {  
+
+
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort()
+console.log(fruits)
+
+
+const numbers = [4, 2, 5, 1, 3];
+numbers.sort(function (a, b) {
+  return a - b;
+});
+console.log(numbers);
+
+
+
+function sortedArray (k,n) {  
      var arr=[];
       
-
-        for(var i=0; i<N;i++){
+        for(var i=0; i<n; i++){
             arr.push(i)
         }
     
