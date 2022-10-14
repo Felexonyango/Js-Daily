@@ -5,9 +5,9 @@ let fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.sort()
 console.log(fruits)
 
-
 const numbers = [4, 2, 5, 1, 3];
-numbers.sort(function (a, b) {
+
+numbers.sort((a, b)=> {
   return a - b;
 });
 console.log(numbers);

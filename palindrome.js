@@ -10,11 +10,6 @@ else{
     return false
 }
 
-   
-   
-
-
-
     }
 
     console.log(palindrome("madam"))

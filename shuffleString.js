@@ -1,6 +1,8 @@
 var str = "Hi there , it is  DT.";
 
-let shuffled = str.split("").sort(() => {
+let shuffle = str
+  .split("")
+  .sort(() => {
     return 0.5 - Math.random();
   })
   .join("");
@@ -18,4 +20,3 @@ String.prototype.shuffle = function () {
   return a.join("");
 };
 console.log("Hello there am Mack".shuffle());
-
