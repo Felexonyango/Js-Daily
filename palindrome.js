@@ -10,10 +10,26 @@ function palindromeString(str) {
 
 console.log(palindromeString("madam"));
 
-function palindromeNumber(num){
-     const reverseNum = num.toString().split("").reverse().join("")
-     return num === reverseNum
+const isPalindrome = (x) => {
+  if (x < 0 || (x % 10 === 0 && x !== 0)) {
+    return false;
+  }
+  
+  return x === reverse(x);
+};
 
-}
+const reverse = (num) => {
+  let rev = 0;
+  
+  while (num != 0) {
+    rev = rev * 10 + num % 10;
+    num = parseInt(num / 10, 10);
+  }
+  
+  return rev;
+};
+console.log(isPalindrome(41));
 
-console.log(palindromeNumber(31));
+
+
+
