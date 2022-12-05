@@ -1,16 +1,19 @@
+function palindromeString(str) {
+  var str1 = str.split("").reverse().join("");
 
-
- function palindrome(str){
- var str1=str.split("").reverse().join("");
- 
- if(str1===str){
-    return true
- }
-else{
-    return false
+  if (str1 === str) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-    }
+console.log(palindromeString("madam"));
 
-    console.log(palindrome("madam"))
- 
+function palindromeNumber(num){
+     const reverseNum = num.toString().split("").reverse().join("")
+     return num === reverseNum
+
+}
+
+console.log(palindromeNumber(31));
