@@ -3,24 +3,24 @@
 // Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
 // The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
 
-function mergesorted(nums1, m, nums2, n) {
-  let first = m - 1;
-  let second = n - 1;
-  //concanating
-  let i = m + n - 1;
-  while (second > 0) {
-    let fval = nums1[first];
-    let sval = nums2[second];
-    if (fval > sval) {
-      nums1[i] = fval;
-      i--;
-      first--;
-    }
-    else{
-        nums1[i]==sval
-        i--
-        second --
-    }
+function mergeLists(list1, list2) {
+  let dummy = new ListNode();
+  let current = dummy;
+
+  while (list1 && list2) {
+      if (list1.val < list2.val) {
+          current.next = list1;
+          list1 = list1.next;
+      } else {
+          current.next = list2;
+          list2 = list2.next;
+      }
+      current = current.next;
   }
+
+  current.next = list1 || list2;
+
+  return dummy.next;
 }
+
 console.log(mergesorted([2, 4, 8, 9], 4, [0, 4, 6, 9], 4));
