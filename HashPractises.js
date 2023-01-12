@@ -30,7 +30,7 @@ let user = {
     console.log( user[key] ); 
   }
 
-
+ 
   //to get sum
   let  salary={
     maize:200,
@@ -39,5 +39,6 @@ let user = {
   let sum =0
   for(let key in salary){
     sum +=salary[key]
+  
   }
   console.log(sum)
