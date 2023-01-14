@@ -15,23 +15,23 @@ const removeDuplicates = (nums) => {
 
     }
 };
-console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
+console.log(removeDuplicates([1,1,1,2,2,3,3,4]))
 
 //write algorithm to remove duplicated of sorted array  in javascript?
 
 
-var removeDuplicatess = function(nums) {
-    let j = 0;
-    for (let i = 1, len = nums.length; i < len; i++) {
-        if (nums[i] !== nums[j]) {
-            nums[++j] = nums[i];
-        }
-    }
+// var removeDuplicatess = function(nums) {
+//     let j = 0;
+//     for (let i = 1, len = nums.length; i < len; i++) {
+//         if (nums[i] !== nums[j]) {
+//             nums[++j] = nums[i];
+//         }
+//     }
     
-    return j + 1;    
-};
+//     return j + 1;    
+// };`
 
-console.log(removeDuplicatess([0,0,1,1,1,2,2,3,3,4]))
+// console.log(removeDuplicatess([0,0,1,1,1,2,2,3,3,4]))
 
 
 

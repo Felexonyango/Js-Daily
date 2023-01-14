@@ -11,3 +11,17 @@ function checkIfStringIsInAnotherString(sentence) {
     }
 }
 console.log(checkIfStringIsInAnotherString('jdhhdhdkj'))
+
+const lengthofString=(text)=>{
+    let arrayofs1 =text.split('')
+    for(let index =0; index<arrayofs1.length; i++){
+        let word=arrayofs1[index]
+        for(let j=1; j<arrayofs1.length; j++){
+            let secondtext=arrayofs1[j]
+            if(secondtext.includes(word) && secondtext !==word){
+                
+            }
+        }
+
+    }
+}

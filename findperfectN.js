@@ -8,12 +8,12 @@ function findPerfect(n){
         }
     }
     if(sum !== n){
-        let excess = (sum - n)/2;
-        if(arr.includes(excess)){
-            return excess;
+        let result = (sum - n)/2;
+        if(arr.includes(result)){
+            return result;
         }
-        else return 'Neither'
+        else return console.log('Neither')
     }
-    else return 'Perfect'
+    else return  console.log('Perfect')
 }
-console.log(findPerfect(60))
+console.log(findPerfect(6))
