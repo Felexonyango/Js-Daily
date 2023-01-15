@@ -16,3 +16,17 @@ function lengthOfLastWord(s){
  
 }; 
 console.log(lengthOfLastWord('hello yes'))
+
+
+//Most asked questions
+
+// Two Sum
+// Reverse Integer
+// Palindrome Number
+// Roman to Integer
+// Longest Common Prefix
+// Valid Parentheses
+// Merge Two Sorted Lists
+// Remove Duplicates from Sorted Array
+// Implement strStr()
+// Search in Rotated Sorted Array
