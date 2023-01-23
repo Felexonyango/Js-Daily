@@ -17,14 +17,17 @@ function GroupAnagram(words) {
       }
       else{
           anagrams[sortedWord] = [words[i]]
-      }
+      } 
     }
     return Object.values(anagrams);
-  }
+  } 
   console.log(GroupAnagram(["eat", "tea", "tan", "ate", "nat", "bat"]));
   
 
+//An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase,
+// typically using all the original letters exactly once.
 
+ 
 function GroupAnagrams(words) {
   const anagrams = {}; // to store all the anagram groups
   for (const word of words) {
