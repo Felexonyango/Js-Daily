@@ -40,6 +40,8 @@ function MajorityElements(nums) {
 }
 console.log(MajorityElements([3, 2, 3]));
 
+
+//optimum code 
 var majorityElement = function (nums) {
     let map = new Map();
     for (let num of nums) {
