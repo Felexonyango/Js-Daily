@@ -26,7 +26,9 @@ let ransomNote = "a",
   magazine = "b";
 console.log(stringsConstruction(ransomNote, magazine));
 
-function stringsConstructions() {
+
+
+function stringsConstructions(ransomNote,magazine) {
   let obj1 = {}
    let  obj2 = {};
   for (let i = 0; i <= ransomNote.length - 1; i++) {
