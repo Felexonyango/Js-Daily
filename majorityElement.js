@@ -15,7 +15,7 @@ function MajorityElement(nums) {
   return MajorityElement;
 }
 
-console.log(MajorityElement([3, 2, 3]));
+console.log(MajorityElement([3, 2, 3,6,6,6,9]));
 
 function MajorityElements(nums) {
   let hashMap = new Map();
