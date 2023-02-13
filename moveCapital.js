@@ -1,12 +1,12 @@
 function moveUpperF(str) {
-  const s = str.split("");
+  const s = str.split(""); //split it into substring
   const Upper = [];  
   const lower = []; 
-  for (var i = 0; i < s.length; i++) {
+  for (let i = 0; i < s.length; i++) {
     if (s[i] == s[i].toUpperCase()) {
       Upper.push(s[i]);
   
-    }
+    } 
     else{
         lower.push(s[i])
     }
