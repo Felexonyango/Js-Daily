@@ -37,7 +37,7 @@ function arrayIntersection(nums1, nums2) {
     for (let j = 0; j < nums2.length; j++) {
       if (nums1[i] === nums2[j]) {
         if (!result.includes(nums1[i])) {
-          result.push(nums1[i]); // push matching result into arrray 
+          result.push(nums1[i]); // push matching result into arrray
         }
       }
     }
@@ -46,4 +46,18 @@ function arrayIntersection(nums1, nums2) {
 }
 
 console.log(arrayIntersection([1, 2, 2, 1], [2, 2]));
- 
+//using hash map
+
+function arrayIntersectionHash(nums1, nums2) {
+  const result = [];
+  const set = new Set(nums1);
+  for (let i = 0; i < nums2.length; i++) {
+    if (set.has(nums2[i])) {
+      if (!result.includes(nums1[i])) {
+        result.push(nums2[i]);
+      }
+    }
+  }
+  return result;
+}
+console.log(arrayIntersectionHash([1, 2, 2, 1], [2, 2]));
