@@ -1,30 +1,6 @@
 // Given two strings ransomNote and magazine, return true if
 // ransomNote can be constructed by using the letters from magazine and false
 // otherwise.Each letter in magazine can only be used once in ransomNote.
-function stringsConstruction(ransomNote, magazine) {
-  let count = {};
-  for (let char of magazine) {
-    if (char in count) {
-      count[char] += 1;
-    } else {
-      count[char] = 1;
-    }
-  }
-  for (let char of ransomNote) {
-    if (char in count) {
-      count[char]--;
-      if (count[char] < 0) {
-        return false;
-      }
-    } else {
-      return false;
-    }
-  }
-  return true;
-}
-let ransomNote = "a",
-  magazine = "b";
-console.log(stringsConstruction(ransomNote, magazine));
 
 
 
