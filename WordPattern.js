@@ -46,7 +46,7 @@ const wordPatternObject = (pattern, s)=> {
         }
       } else {
         if(Object.values(result).includes(word))
-        // if (Array.from(map.values()).includes(word)) {
+        
           return false;
         }
         map.set(char, word);
@@ -56,5 +56,5 @@ const wordPatternObject = (pattern, s)=> {
   
   const patterns = "abba";
   const ss = "dog cat cat dog";
-  console.log(wordPattern(patterns, ss)); // Output: true
+  console.log(wordPattern(patterns, ss))
   
