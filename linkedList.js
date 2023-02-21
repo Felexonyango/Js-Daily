@@ -30,6 +30,11 @@ class LinkedList {
     }
   }
 
+
+  insertAtIndex(data){
+    
+
+  }
   addFirst(data) {
     let newNode = new Node(data);
     if (!this._head) {
@@ -41,6 +46,8 @@ class LinkedList {
     }
     this.size++;
   }
+
+
 
   delete(data) {
     if (!this._head) {
@@ -63,7 +70,24 @@ class LinkedList {
       current = current.next;
     }
   }
+
+
+  getAt(index){
+    let current=this._head;
+    let count =0
+    while(current){
+
+      if(count==index){
+        console.log(current.data,'heelo')
+      }
+      current ++
+      current=current.next
+  
+    }
+    }
+
 }
+
 
 const list = new LinkedList();
 list.addFirst(9);
@@ -72,6 +96,7 @@ list.insert(2);
 list.insert(3);
 list.insert(4);
 list.delete(1);
+list.getAt(2)
 
 console.log(list._head); // Node { data: 1, next: Node { data: 2, next: Node { data: 3, next: Node { data: 4, next: null } } } }
 
