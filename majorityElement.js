@@ -1,7 +1,7 @@
 function MajorityElement(nums) {
   let count = 0;
   let MajorityElement = 0;
-
+  
   for (let i = 0; i < nums.length; i++) {
     if (count === 0) {
       MajorityElement = nums[i];

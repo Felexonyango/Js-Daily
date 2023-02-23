@@ -1,9 +1,10 @@
 
 function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
+    for (var i = array.length - 1; i > 0; i--) {   //iterates through array from last to first element
     
-        var j = Math.floor(Math.random() * (i + 1));
-                    
+        var j = Math.floor(Math.random() * (i + 1)); ///generates random index
+                 
+        //Then, it swaps the current element (array[i]) with the element at the random index (array[j])
         var temp = array[i];
         array[i] = array[j];
         array[j] = temp;
@@ -11,6 +12,5 @@ function shuffleArray(array) {
         
     return array;
  }
- const arrayData=[4,8,9,7,4]
- const array1 =shuffleArray(arrayData)
- console.log(array1)
+
+ console.log(shuffleArray([4,8,9,7,4]))

@@ -6,8 +6,9 @@ function isPangram(string){
   let strArr = string.toLowerCase();
   let alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
   
-  for (let i = 0; i < alphabet.length; i++) {
-    if(strArr.indexOf(alphabet[i]) < 0){
+  for (let i = 0; i < alphabet.length; i++) { 
+    if(strArr.indexOf(alphabet[i]) < 0){    //example var colors=["red","green","blue"];var pos=colors.indexOf("blue");//2
+      
       return false;
     }
   }

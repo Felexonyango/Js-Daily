@@ -37,7 +37,7 @@ function arrayIntersection(nums1, nums2) {
     for (let j = 0; j < nums2.length; j++) {
       if (nums1[i] === nums2[j]) {
         if (!result.includes(nums1[i])) {
-          result.push(nums1[i]); // push matching result into arrray
+          result.push(nums1[i]); 
         }
       }
     }

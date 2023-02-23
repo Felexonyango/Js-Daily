@@ -6,8 +6,8 @@ class Node {
   }
 }
 
-const n1 = new Node(200);
-console.log(n1);
+// const n1 = new Node(200);
+// console.log(n1);
 class LinkedList {
   constructor() {
     this._head = null;
@@ -50,6 +50,7 @@ class LinkedList {
 
 
   delete(data) {
+    let previousNode;
     if (!this._head) {
       //if there is no head ,return null
       return null;
@@ -61,14 +62,13 @@ class LinkedList {
       return;
     }
     let current = this._head;
-    while (current.next) {
-      //if head does not contain data to be removed   enters into next in if statement
-      if (current.next.data === data) {
-        current.next = current.next.next;
-        return;
-      }
-      current = current.next;
+    while (current.data!==data) { //if current Node does not contain data  thats  needed  ,set previous node equal to current
+      previousNode=current
+      current=current.next
+   
+      previousNode.next = current.next;
     }
+    this.size--
   }
 
 
@@ -95,9 +95,10 @@ list.insert(1);
 list.insert(2);
 list.insert(3);
 list.insert(4);
-list.delete(1);
+list.delete(9);
 list.getAt(2)
 
 console.log(list._head); // Node { data: 1, next: Node { data: 2, next: Node { data: 3, next: Node { data: 4, next: null } } } }
 
-//time to try
+//Reverse LinkedList
+
