@@ -30,11 +30,6 @@ class LinkedList {
     }
   }
 
-
-  insertAtIndex(data){
-    
-
-  }
   addFirst(data) {
     let newNode = new Node(data);
     if (!this._head) {
@@ -46,8 +41,6 @@ class LinkedList {
     }
     this.size++;
   }
-
-
 
   delete(data) {
     let previousNode;
@@ -62,43 +55,67 @@ class LinkedList {
       return;
     }
     let current = this._head;
-    while (current.data!==data) { //if current Node does not contain data  thats  needed  ,set previous node equal to current
-      previousNode=current
-      current=current.next
-   
+    while (current.data !== data) {
+      //if current Node does not contain data  thats  needed  ,set previous node equal to current
+      previousNode = current;
+      current = current.next;
+
       previousNode.next = current.next;
     }
-    this.size--
+    this.size--;
   }
 
-
-  getAt(index){
-    let current=this._head;
-    let count =0
-    while(current){
-
-      if(count==index){
-        console.log(current.data,'heelo')
+  removeduplicate() {
+    let current = this._head;
+    while (current && current.next) {
+      if (current.data === current.next.data) {
+        // compares current node and next current node
+        current.next = current.next.next; // removes duplicates if  curent node is equal to the next current node
+        this.size--; //We also decrement the size of the linked list since we are removing a node.
+      } else {
+        current = current.next;
       }
-      current ++
-      current=current.next
-  
     }
-    }
+    return this._head;
+  }
 
+  getAt(index) {
+    let current = this._head;
+    let count = 0;
+    while (current) {
+      if (count == index) {
+        console.log(current.data, "heelo");
+      }
+      current++;
+      current = current.next;
+    }
+  }
+  clear(){
+    this._head=null
+  }
+  getLastNode(){
+    let lastNode=this._head
+    if(lastNode){
+      while(lastNode.next){
+        lastNode=lastNode.next
+        console.log(lastNode.next)
+      }
+    }
+    return lastNode 
+  } 
 }
-
 
 const list = new LinkedList();
 list.addFirst(9);
+list.insert(1);
 list.insert(1);
 list.insert(2);
 list.insert(3);
 list.insert(4);
 list.delete(9);
-list.getAt(2)
+// list.getAt(2);
+list.removeduplicate();
+list.getLastNode()
+// list.clear()
 
-console.log(list._head); // Node { data: 1, next: Node { data: 2, next: Node { data: 3, next: Node { data: 4, next: null } } } }
-
-//Reverse LinkedList
-
+console.log(list._head);
