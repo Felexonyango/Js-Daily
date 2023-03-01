@@ -90,19 +90,31 @@ class LinkedList {
       current = current.next;
     }
   }
-  clear(){
-    this._head=null
+  clear() {
+    this._head = null;
   }
-  getLastNode(){
-    let lastNode=this._head
-    if(lastNode){
-      while(lastNode.next){
-        lastNode=lastNode.next
-        console.log(lastNode.next)
+  getLastNode() {
+    let lastNode = this._head;
+    if (lastNode) {
+      while (lastNode.next) {
+        lastNode = lastNode.next;
+        console.log(lastNode.next);
       }
     }
-    return lastNode 
-  } 
+    return lastNode;
+  }
+
+  reverse() {
+    let prev = null;
+    let current = this._head;
+    while (current !== null) {
+      let next = current.next;
+      prev = current.next;
+      prev = current;
+      current = next;
+    }
+    this._head=prev
+  }
 }
 
 const list = new LinkedList();
@@ -115,7 +127,8 @@ list.insert(4);
 list.delete(9);
 // list.getAt(2);
 list.removeduplicate();
-list.getLastNode()
+list.getLastNode();
 // list.clear()
+list.reverse()
 
 console.log(list._head);
