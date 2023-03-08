@@ -1,7 +1,7 @@
 function moveArraysLeft(arr){
     for(let i=0;i<arr.length;i++){
         if(arr[i]===0){
-            arr.splice(i,1)  // from index i remove 1 element
+            arr.splice(i,1)  
             arr.unshift(0)
         }
     }

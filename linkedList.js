@@ -16,7 +16,7 @@ class LinkedList {
 
   insert(data) {
     const newNode = new Node(data); //creates a new node .
-    if (!this._head) {
+    if (!this ._head) {
       this._head = newNode; //check if linked list is empty, if  empty insert node .
     } else {
       //if not empty, traverse the node and insert the last node
