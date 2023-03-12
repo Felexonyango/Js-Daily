@@ -42,6 +42,7 @@ class LinkedList {
     this.size++;
   }
 
+
   delete(data) {
     let previousNode;
     if (!this._head) {
@@ -93,6 +94,24 @@ class LinkedList {
   clear() {
     this._head = null;
   }
+  getMiddleNode(){
+    //using fast and slow  pointer
+
+    let fast =this._head
+    let slow=this._head
+    if(this._head!=null){
+      while(fast!=null && fast.next !=null){
+        slow =slow.next
+        fast=fast.next.next
+      }
+    
+      return slow.data
+      
+    }
+
+
+  
+  }
   getLastNode() {
     let lastNode = this._head;
     if (lastNode) {
@@ -117,18 +136,22 @@ class LinkedList {
   }
 }
 
+
+
 const list = new LinkedList();
-list.addFirst(9);
+//list.addFirst(9);
 list.insert(1);
-list.insert(1);
+//list.insert(1);
 list.insert(2);
 list.insert(3);
 list.insert(4);
-list.delete(9);
+list.insert(5)
+// list.delete(9);
 // list.getAt(2);
-list.removeduplicate();
-list.getLastNode();
+ //list.removeduplicate();
+// list.getLastNode();
 // list.clear()
-list.reverse()
+//list.reverse()
+list.getMiddleNode()
 
 console.log(list._head);
