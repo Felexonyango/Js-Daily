@@ -162,6 +162,42 @@ class LinkedList {
     }
     this._head = prev;
   }
+  removeElements =(val)=>{
+    if (!this._head) return null;
+  
+    let allsame=true;
+    let curr =head
+    while(curr){
+      if(curr.val!=val){
+        allsame=false
+        break;
+      }
+      curr =curr.next
+    }
+    if(allsame) return null
+
+    // Remove matching values from the beginning of the list
+   while(this._head && this._head.val === val) { //check if value exist in a node
+      this._head = this._head.next;
+
+
+    }
+  
+    // Remove matching values from the rest of the list
+    let previousNode = this._head;
+    let current = this._head
+    while (current) {
+      if (current.val === val) {
+        previousNode.next = current.next;
+      } else {
+        previousNode = current;
+      }
+      current = current.next;
+    }
+  
+    return this._head;
+  };
+   
 }
 
 const list = new LinkedList();
