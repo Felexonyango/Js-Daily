@@ -155,7 +155,7 @@ class LinkedList {
     let current = this._head;
     while (current !== null) {
       let next = current.next;
-      prev = current.next;
+      current.next=prev
       prev = current;
       current = next;
     }
@@ -210,7 +210,7 @@ list.insert(5);
 //list.removeduplicate();
 // list.getLastNode();
 // list.clear()
-//list.reverse()
-list.getMiddleNode();
+list.reverse()
+//list.getMiddleNode();
 
 console.log(list._head);
