@@ -104,7 +104,7 @@ class LinkedList {
         slow =slow.next
         fast=fast.next.next
       }
-    
+      console.log(slow.data)
       return slow.data
       
     }
@@ -122,6 +122,20 @@ class LinkedList {
     }
     return lastNode;
   }
+
+
+ oddEvenList () {
+  if(this._head!=null){
+    return this._head
+  }
+  let count =0;
+  let end =this._head
+  while(end.next){
+    end=end.next
+    count +=1
+  }
+    
+  };
 
   reverse() {
     let prev = null;
