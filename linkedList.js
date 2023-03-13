@@ -134,6 +134,22 @@ class LinkedList {
     odd.next=evenHead
     return this._head
   }
+  //alternative 
+ oddEvenLists(head) {
+    if (!head) return head;
+  
+    var odd = head;
+    var even = head.next;
+    while (odd.next && odd.next.next) {
+      var tmp = odd.next; //storing odd into temp
+
+      odd.next = odd.next.next;
+      odd = odd.next;
+      tmp.next = odd.next;
+    }
+    odd.next = even; //swapping temp of old values with even
+    return head;
+  }
 
   reverse() {
     let prev = null;
