@@ -27,7 +27,7 @@ var detectCycle = function (head) {
     
     fast = head;
     //move both pointers one step
-    //move fast to head , to start
+ //finaly you will reach the start
     while (fast !== slow) {
         fast = fast.next;
         slow = slow.next;
