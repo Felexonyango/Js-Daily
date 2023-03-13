@@ -16,7 +16,7 @@ class LinkedList {
 
   insert(data) {
     const newNode = new Node(data); //creates a new node .
-    if (!this ._head) {
+    if (!this._head) {
       this._head = newNode; //check if linked list is empty, if  empty insert node .
     } else {
       //if not empty, traverse the node and insert the last node
@@ -41,7 +41,6 @@ class LinkedList {
     }
     this.size++;
   }
-
 
   delete(data) {
     let previousNode;
@@ -94,23 +93,19 @@ class LinkedList {
   clear() {
     this._head = null;
   }
-  getMiddleNode(){
+  getMiddleNode() {
     //using fast and slow  pointer
 
-    let fast =this._head
-    let slow=this._head
-    if(this._head!=null){
-      while(fast!=null && fast.next !=null){
-        slow =slow.next
-        fast=fast.next.next
+    let fast = this._head;
+    let slow = this._head;
+    if (this._head != null) {
+      while (fast != null && fast.next != null) {
+        slow = slow.next;
+        fast = fast.next.next;
       }
-      console.log(slow.data)
-      return slow.data
-      
+      console.log(slow.data);
+      return slow.data;
     }
-
-
-  
   }
   getLastNode() {
     let lastNode = this._head;
@@ -123,19 +118,22 @@ class LinkedList {
     return lastNode;
   }
 
+  oddEvenList() {
+    if (!this._head) return null;
+    let even = this._head.next // 1,2,3,4,5,6 so even are 2,4,6 
+    let odd = this._head;
+    let evenHead =even // pointer of beginning of even list
 
- oddEvenList () {
-  if(this._head!=null){
+    while (even && even.next) {
+      odd.next = even.next; // Connect odd to next even node
+      odd = odd.next;
+      even.next = odd.next; // Connect even to next odd node
+      even = even.next;
+
+    }
+    odd.next=evenHead
     return this._head
   }
-  let count =0;
-  let end =this._head
-  while(end.next){
-    end=end.next
-    count +=1
-  }
-    
-  };
 
   reverse() {
     let prev = null;
@@ -146,11 +144,9 @@ class LinkedList {
       prev = current;
       current = next;
     }
-    this._head=prev
+    this._head = prev;
   }
 }
-
-
 
 const list = new LinkedList();
 //list.addFirst(9);
@@ -159,13 +155,13 @@ list.insert(1);
 list.insert(2);
 list.insert(3);
 list.insert(4);
-list.insert(5)
+list.insert(5);
 // list.delete(9);
 // list.getAt(2);
- //list.removeduplicate();
+//list.removeduplicate();
 // list.getLastNode();
 // list.clear()
 //list.reverse()
-list.getMiddleNode()
+list.getMiddleNode();
 
 console.log(list._head);
