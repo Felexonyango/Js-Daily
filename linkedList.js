@@ -120,24 +120,23 @@ class LinkedList {
 
   oddEvenList() {
     if (!this._head) return null;
-    let even = this._head.next // 1,2,3,4,5,6 so even are 2,4,6 
+    let even = this._head.next; // 1,2,3,4,5,6 so even are 2,4,6
     let odd = this._head;
-    let evenHead =even // pointer of beginning of even list
+    let evenHead = even; // pointer of beginning of even list
 
     while (even && even.next) {
       odd.next = even.next; // Connect odd to next even node
       odd = odd.next;
       even.next = odd.next; // Connect even to next odd node
       even = even.next;
-
     }
-    odd.next=evenHead
-    return this._head
+    odd.next = evenHead;
+    return this._head;
   }
-  //alternative 
- oddEvenLists(head) {
+  //alternative
+  oddEvenLists(head) {
     if (!head) return head;
-  
+
     var odd = head;
     var even = head.next;
     while (odd.next && odd.next.next) {
@@ -162,30 +161,29 @@ class LinkedList {
     }
     this._head = prev;
   }
-  removeElements =(val)=>{
+  removeElements = (val) => {
     if (!this._head) return null;
-  
-    let allsame=true;
-    let curr =head
-    while(curr){
-      if(curr.val!=val){
-        allsame=false
+
+    let allsame = true;
+    let curr = head;
+    while (curr) {
+      if (curr.val != val) {
+        allsame = false;
         break;
       }
-      curr =curr.next
+      curr = curr.next;
     }
-    if(allsame) return null
+    if (allsame) return null;
 
     // Remove matching values from the beginning of the list
-   while(this._head && this._head.val === val) { //check if value exist in a node
+    while (this._head && this._head.val === val) {
+      //check if value exist in a node
       this._head = this._head.next;
-
-
     }
-  
+
     // Remove matching values from the rest of the list
     let previousNode = this._head;
-    let current = this._head
+    let current = this._head;
     while (current) {
       if (current.val === val) {
         previousNode.next = current.next;
@@ -194,10 +192,9 @@ class LinkedList {
       }
       current = current.next;
     }
-  
+
     return this._head;
   };
-   
 }
 
 const list = new LinkedList();
