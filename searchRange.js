@@ -9,7 +9,7 @@ var searchRange = function(nums, target) {
     // Find the leftmost index where target appears
     while (left <= right) {
         let mid = Math.floor((left + right) / 2)
-        // if midd  is greater than target that means target is located in left 
+        // if mid  is greater than target that means target is located in left
         if (nums[mid] >= target) {
             right = mid - 1
         } else {
