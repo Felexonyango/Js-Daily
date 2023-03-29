@@ -4,7 +4,7 @@ function maximumdiff(arrayInterger) {
   let diff = 0;
   for (let i = 0; i < arrayInterger.length; i++) {
     if (arrayInterger[i] > maximum) {
-        maximum = arrayInterger[i];
+        maximum = arrayInterger[i]; 
     }
     if (arrayInterger[i] < minimum) {
         minimum = arrayInterger[i];

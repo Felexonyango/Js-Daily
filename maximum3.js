@@ -5,7 +5,7 @@
 function thirdMaximum(nums) {
     nums = [...new Set(nums)].sort((a,b) => b-a);
     
-    if(nums.length<=2){
+    if(nums.length >=2){
         return nums[0] //this means the largest will be at index[0]
     }
     else{

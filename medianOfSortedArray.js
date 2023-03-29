@@ -17,6 +17,7 @@ function findMedianSortedArray(nums1, nums2) {
     const merged = mergeSortedArrays(nums1, nums2);
     const mid = Math.floor(merged.length / 2);
     if (merged.length % 2 === 0) {
+      //explanation
       return (merged[mid - 1] + merged[mid]) / 2;
     } else {
       return merged[mid];

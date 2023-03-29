@@ -1,9 +1,10 @@
 function addBinary(a,b) {
     let sum = a + b;
-    let binarySum = sum.toString(2);
+    let binarySum =sum.toString(2)
     
-    return binarySum;
+    return BigInt(binarySum);
   }
+  console.log(addBinary(2,3))
 
 
   function generateRandomNames(names) {

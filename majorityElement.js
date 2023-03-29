@@ -1,21 +1,21 @@
-function MajorityElement(nums) {
+function majorityElement(nums) {
   let count = 0;
-  let MajorityElement = 0;
+  let majorityElement = 0;
   
   for (let i = 0; i < nums.length; i++) {
     if (count === 0) {
-      MajorityElement = nums[i];
+      majorityElement = nums[i];
       count = 1;
-    } else if (MajorityElement === nums[i]) {
+    } else if (majorityElement === nums[i]) {
       count++;
     } else {
       count--;
     }
   }
-  return MajorityElement;
+  return majorityElement;
 }
 
-console.log(MajorityElement([3, 2, 3,6,6,6,9]));
+console.log(majorityElement([3, 2, 3,6,6,6,9]));
 
 function MajorityElements(nums) {
   let hashMap = new Map();

@@ -2,7 +2,7 @@ function arrayPair(nums) {
     let sortedNumber = nums.sort((a, b) => a - b);  //ascending order
     let sum = 0;
     for (let i = 0; i < sortedNumber.length; i++) { //iterate through array 
-      if (i % 2 == 0) {  //check is its divisible
+      if (i % 2 === 0) {  //check is its divisible
           sum+=sortedNumber[i]   //sum =sum+sortedNumber[i]
       }
   

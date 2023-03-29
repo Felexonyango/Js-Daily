@@ -1,22 +1,15 @@
-var str = "Hi there , it is  DT.";
+// You are given a string s and an integer array indices of the same length.
+//The string s will be shuffled such that the character at the ith position moves
+// to indices[i] in the shuffled string.
 
-let shuffle = str
-  .split("")
-  .sort(() => {
-    return 0.5 - Math.random();
-  })
-  .join("");
-
-String.prototype.shuffle = function () {
-  var a = this.split(""),
-    n = a.length;
-
-  for (var i = n - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var tmp = a[i];
-    a[i] = a[j];
-    a[j] = tmp;
+// Return the shuffled string
+var restoreString = function (s, indices) {
+  let result = [];
+  for (let i = 0; i < indices.length; i++) {
+   
+     const data =result[indices[i]] = s[i];
+    
   }
-  return a.join("");
+  return result.join('')
 };
-console.log("Hello there am Mack".shuffle());
+console.log(restoreString("codeleet", [4,5,6,7,0,2,1,3])) 

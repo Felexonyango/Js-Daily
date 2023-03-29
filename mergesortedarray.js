@@ -10,11 +10,6 @@
 // denote the elements that should be merged, and the last n elements are set to
 // 0 and should be ignored. nums2 has a length of n.
 
-
-
- 
-
-
 var merge = function(nums1, m, nums2, n) {
     for(let i=m,j=0; j<n ,i<m+n;j++, i++){
            nums1[i]= nums2[j]
