@@ -5,5 +5,5 @@ let temp
   }
   return temp
 };
-console.log(strStr("sadbutsad", "sad"));
+console.log(strStr("hello hello", "llo"));
  

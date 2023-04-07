@@ -4,7 +4,7 @@ function removeElement( nums,val){
     var j = 0;
     for(var i=0;i<nums.length;i++)
     {
-        if(nums[i]!=val){
+        if(nums[i]!==val){
             nums[j++] = nums[i];
         }
     }
