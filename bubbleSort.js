@@ -3,11 +3,11 @@ function bubbleSort(nums){
         for(var j=0; j<nums.length -1 ;j++){
      
             if(nums[j]>nums[j+1]){
-
-                // [[nums[j],nums[j+1]]]= [[nums[j+1],nums[j]]]
-                var temp = nums[j]
-                nums[j] = nums[j+1]
-                nums[j + 1] = temp;
+              //smaller numbers should be come first
+                 [[nums[j],nums[j+1]]]= [[nums[j+1],nums[j]]]
+                // var temp = nums[j]
+                // nums[j] = nums[j+1]
+                // nums[j + 1] = temp;
             }
 
         }
