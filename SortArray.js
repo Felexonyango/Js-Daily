@@ -51,3 +51,32 @@ const nums = [3, 2, 1, 5, 4];
 const sortedNums = mergeSort(nums);
 console.log(sortedNums); // Output: [1, 2, 3, 4, 5]
 
+//sort array by swapping
+
+var sortArray = function (nums) {
+  for (let i = 1; i < nums.length; i++) {
+    let j = i - 1;
+    while (j >= 0 && nums[j + 1] < nums[j]) {
+      [nums[j + 1], nums[j]] = [nums[j], nums[j + 1]];
+      j--;
+    }
+  }
+  return nums;
+};
+console.log(sortArray([5, 2, 3, 1]));
+
+//bubble sorting 
+
+var sortArrays = function (nums) {
+  for (let i = 0; i < nums.length - 1; i++) {
+   // for checking neighborhood element
+   for(let j =i+1; j < nums.length; j++) {
+    if(nums[i]> nums[j]) {
+      [nums[i], nums[j]] =[nums[j],nums[i]]
+    }
+   }
+  }
+  return nums
+};
+
+console.log(sortArrays([5, 2, 3, 1]));

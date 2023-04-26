@@ -31,6 +31,8 @@ function LargestNumber(nums) {
         const temp = strNums[i];
         strNums[i] = strNums[j];
         strNums[j] = temp;
+
+        //[[strNums[i],strNums[j]] = [strNums[j],strNums[i]]]
       }
     }
   }

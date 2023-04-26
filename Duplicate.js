@@ -27,3 +27,22 @@ function containDuplicates(nums){
     
 }
 console.log(containDuplicate([1,2,3,3]))
+
+
+
+
+function countUniqueElements(nums){
+    let count = 0;
+    let  result={}
+    for(let i=0; i<nums.length; i++){
+      let number = nums[i]
+      if(!(number in result)){
+        result[number] = i;
+         count ++
+      }
+
+    }
+    return count
+
+}
+console.log(countUniqueElements([6,8,1,2,2,3,4,5]))

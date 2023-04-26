@@ -1,4 +1,4 @@
-function smallestMissingPositive(nums) {
+ function smallestMissingPositive(nums) {
   const n = nums.length;
   const marked = new Array(n + 1).fill(false); // initialize array to all false
   for (let i = 0; i < n; i++) {

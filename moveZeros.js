@@ -75,4 +75,22 @@ console.log(moveZerostoLast([1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0]));
 
 //   return nums;
 // }
+
 // console.log(mergeSort([1, 2, 0, 0, 5, 6, 7]));
+
+
+// move zeroes without returning value
+var moveZeroes = function(nums) {
+  let j=0
+    for(let i=0; i<nums.length; i++){
+    if(nums[i]===0){
+        j++
+    }
+    else {
+         [[nums[i],nums[i-j]]= [nums[i-j],nums[i]]]
+         //swapping numbers for instance  if were [0001] that means will be  
+          // 1,0 =0,1 then will be 1,0
+    }
+
+    }
+};
