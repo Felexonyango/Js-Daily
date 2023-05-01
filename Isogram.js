@@ -12,5 +12,5 @@ function isIsogram(nums){
 
 
 }
-console.log(isIsogram("machinee"))
+console.log(isIsogram("machine"))
 

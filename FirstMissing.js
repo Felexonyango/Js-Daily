@@ -1,6 +1,6 @@
  function smallestMissingPositive(nums) {
   const n = nums.length;
-  const marked = new Array(n + 1).fill(false); // initialize array to all false
+  const marked = new Array(n + 1).fill(false); 
   for (let i = 0; i < n; i++) {
     if (nums[i] > 0 && nums[i] <= n) {
       marked[nums[i]] = true;
