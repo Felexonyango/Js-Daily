@@ -18,14 +18,16 @@ console.log(removeDuplicatesAndGetTotalUnique([1, 1, 2, 4]));
 //write algorithm to remove duplicated of sorted array  in javascript?
 
 var removeDuplicatess = function (nums) {
-  let j = 0;
-  for (let i = 1, len = nums.length; i < len; i++) {
-    if (nums[i] !== nums[j]) {
-      nums[j++] = nums[i];
+  let hashmap ={}
+  let result = [];
+  for (let i = 1;  i < nums.length; i++) {
+    let number = nums[i];
+    if(!(number in hashmap)){
+     hashmap[number] =true
+      result.push(number);
     }
   }
-
-  return j + 1;
+  return result;
 };
 
 console.log(removeDuplicatess([1, 1, 2, 4]));
