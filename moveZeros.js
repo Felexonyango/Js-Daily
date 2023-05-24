@@ -3,15 +3,15 @@
 // it should be changed to {1, 9, 8, 4, 2, 7, 6, 0, 0, 0, 0}.
 
 function moveZerostoLast(array) {
-  // example 1
-  // for(let i=0; i<array.length; i++){
-  //     if(array[i]===0){
-  //         array.splice(i,1) // from index i remove 1 element
-  //         array.push(0)  //adding zero to the end  arr.push(...items) – adds items to the end,
-  //     }
+  
+  for(let i=0; i<array.length; i++){
+      if(array[i]===0){
+          array.splice(i,1)
+          array.push(0)  
+      }
 
-  // }
-  // return array
+  }
+  return array
 
   if (array.length <= 1) {
     return array;
@@ -94,3 +94,4 @@ var moveZeroes = function(nums) {
 
     }
 };
+console.log(moveZeroes([1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0]))

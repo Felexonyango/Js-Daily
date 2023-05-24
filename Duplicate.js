@@ -30,12 +30,11 @@ console.log(containDuplicate([1,2,3,3]))
 // Duplicate 11
 
 var containsNearbyDuplicate = function(nums, k) {
-    // The line of code is checking if the current index, i, is less than or equal to the difference between 
-    // the current index and the index stored in the hashmap for the current element, nums[i]
+    
     const result = {};
     for (let i = 0; i < nums.length; i++) {
-        if (result[nums[i]] || result[nums[i]] === 0) {
-            if (i - result[nums[i]] <= k) { // 
+        if (result[nums[i]]) {
+            if (i - result[nums[i]] <= k) { 
                 return true;
             }
         }
@@ -43,7 +42,7 @@ var containsNearbyDuplicate = function(nums, k) {
     }
     return false;
 };
-console.log(containsNearbyDuplicate([[1, 2, 3, 1, 2, 1]],[2]))
+console.log(containsNearbyDuplicate([1,2,3,1],[3]))
 
 
 

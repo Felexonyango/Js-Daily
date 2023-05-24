@@ -15,9 +15,9 @@ function Binarysearch(array, target) {
     if (value === target) {
       return mid;
     } else if (value < target) {
-      return (left = mid + 1);
+      left = mid + 1
     } else {
-      return (right = mid - 1);
+      right = mid - 1
     }
   }
   return -1;

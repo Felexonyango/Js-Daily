@@ -1,6 +1,5 @@
 function SearchTargetValue(array,target){
-let index =array.indexOf(target);
-console.log(index); ///check if target exist
+let index =array.indexOf(target)
 if(index !==-1){
     return index
 }
