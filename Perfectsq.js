@@ -9,9 +9,6 @@ function perfectsq(num) {
   }
 }
 console.log(perfectsq(16));
-
-
-
 function Isperfect(num) {
   // return Math.sqrt(num) % 1 === 0 ? true : false;
     if(num<0){

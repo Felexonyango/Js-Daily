@@ -6,13 +6,11 @@ var luckyNumbers  = function(matrix) {
     for(let i=0; i<matrix.length; i++) {
       const row  =matrix[i]
       const min=Math.min(...row) //returning all small set in an array
-      console.log(min,'min')
+  
       const collIndex =row.indexOf(min) //returns index of first occurrence of min Number in a row
       console.log(collIndex,"test")
       let isMax=true
       for(let j=0;j<matrix.length;j++){
-        console.log(matrix[j][collIndex],'hhh')
-        console.log(collIndex,'he')
         if(matrix[j][collIndex]>min){ 
           //get all elements in array multiply by index of min then check if result is greater than min
           //if so then its not max

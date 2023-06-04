@@ -15,13 +15,13 @@ console.log(containDuplicate([1,2,3,3]))
 
 
 function containDuplicates(nums){
-    let array={}
+    let result={}
     for(let i=0;i<nums.length;i++){
-        if(array.includes(nums[i])){
+        if(result.includes(nums[i])){
             return true
         }
         else {
-           return false  //it adds current element to array  to map if it does not exist
+           return false  //it adds current element to result  to map if it does not exist
         }
     }
     

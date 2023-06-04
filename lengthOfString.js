@@ -1,8 +1,9 @@
 const checkIfStringIsInAnotherString = (text, text2) => {
-    const words = text.split(" ");
-    const characters = text2.split("");
-  
+  const characters = text2.split("");
+    const words = text.split('')
+
     for (let i = 0; i < characters.length - text.length + 1; i++) {
+     
       for (let j = 0; j < words.length; j++) {
         const word = words[j];
         const substring = characters.slice(i, i + word.length).join("");
@@ -16,6 +17,6 @@ const checkIfStringIsInAnotherString = (text, text2) => {
     return false;
   };
   
-  console.log(checkIfStringIsInAnotherString("hello", "hello world")); // true
-  console.log(checkIfStringIsInAnotherString("foo", "bar baz")); // false
+  console.log(checkIfStringIsInAnotherString("hello", "helloworld")); // true
+  // console.log(checkIfStringIsInAnotherString("foo", "bar baz")); // false
   

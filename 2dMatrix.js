@@ -8,7 +8,7 @@ let mathScore = [
 ];
 // accessing elements in 2D matrix
 //arrayName[rowIndex][columnIndex]
-console.table(mathScore);
+// console.table(mathScore);
 console.log(mathScore[2][2]);
 console.log(mathScore[0][0]);
 

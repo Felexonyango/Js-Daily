@@ -7,7 +7,7 @@ function searchInsert(nums, target) {
   }
   return nums.length;
 }
-console.log(searchInsert([1, 3, 5, 6], [5]));
+//console.log(searchInsert([1, 3, 5, 6], [5]));
 
 //idea is to find index of target value in sorted array
 // so iterate through sorted array  and compare the value at each index  to the target value
@@ -22,15 +22,18 @@ function searchInsertByBinarySearch(nums, target) {
   let right = nums.length - 1;
 
   while (left <= right) {
-    let mid = Math.floor((left + right) / 2);
-     let value =nums[mid]
-    if (value === target) {
+    let mid = Math.floor((left + right) / 2); //position of middle
+  
+     let value =nums[mid] // middle element
+    //  console.log(value,'test')
+    if (value === target) {  
+      //if value is equal to target return position of  middle element
       return mid;
 
     } else if (value < target) {
-      return (left = mid + 1);
+      left = mid + 1;
     } else if (value > target) {
-      return (right = mid - 1);
+       right = mid - 1;
     }
   }
   return -1

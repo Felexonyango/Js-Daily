@@ -13,18 +13,6 @@ const twoSums = (nums, target) => {
     
 }
 
-const threesums=(num1,num2,target)=>{
-    for(let i=0;i<num1;i++) {
-        for(let j=0;j<num2;j++) {
-        if(num1[i]+num2[j] ===target){
-            console.log(i)
-        }
-        }
-    }
-}
-
-console.log(threesums([1, 2,5, 15], [4, 7, 8, 15], 9)); // Output: [2, 7]
-
 
 
 //using hashmap

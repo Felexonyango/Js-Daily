@@ -9,15 +9,3 @@ function fun(string, n) {
 }
 
 console.log(fun("Vayolence", 3));
-
-
-// function test (text, num){
-//      var res = ""; 
-//      for(var i=0; i < num; i++) { 
-//         res += text.substring(0,(num-i)) + '\n'
-//     }
-    
-//     return res;
-    
-// }
-// console.log(test('hello',3))

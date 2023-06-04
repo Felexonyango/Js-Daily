@@ -14,6 +14,7 @@ function findEvenStrings(words) {
   if (!words) return null;
   let results=[]
   for (let i = 0; i < words.length; i++) {
+    console.log(words[i])
     if (words[i].length % 2 == 0) {
       results.push(words[i])
     
