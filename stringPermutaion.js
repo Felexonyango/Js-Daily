@@ -57,3 +57,16 @@ function isPermutation(s1, s2) {
 }
 
 console.log(checkInclusion("ab", "eidbaooo"));
+
+
+    function permutation( str, result) {
+      if(str.length==0){
+        console.log(result)
+      }
+      for(let i=0; i<str.length; i++){
+        let res =str.substr(0,i)+str.substr(i+1)
+        permutation(res,result+str[i])
+      }
+
+    }
+    console.log(permutation('let',''))
