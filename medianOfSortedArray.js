@@ -23,7 +23,7 @@ function findMedianSortedArray(nums1, nums2) {
       return merged[mid];
     }
   }
-  
+   
   function mergeSortedArrays(nums1, nums2) {
     const merged = [];
     let i = 0;

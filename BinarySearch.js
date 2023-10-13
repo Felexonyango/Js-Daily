@@ -5,8 +5,8 @@
 
 //example  array = [5, 10, 15, 20, 25];
 function Binarysearch(array, target) {
-  const left = 0; //first element
-  const right = array.length - 1; //last element
+  const left = 0; 
+  const right = array.length - 1; 
 
   while (left <= right) {
     const mid = Math.floor((left + right) / 2);
@@ -28,7 +28,6 @@ const target = 15;
 console.log(Binarysearch(array, target));
 
 // Binary search tree
-
 //A tree is a collection of nodes connected by some edges
 class Node {
   constructor(data, left = null, right = null) {

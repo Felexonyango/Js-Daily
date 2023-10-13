@@ -29,7 +29,7 @@ function GroupAnagram(words) {
 
  
 function GroupAnagrams(words) {
-  const anagrams = {}; // to store all the anagram groups
+  const anagrams = {}; 
   for (const word of words) {
     const sortedWord = word.split("").sort().join("");
     anagrams[sortedWord]

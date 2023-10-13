@@ -16,11 +16,3 @@ function DenomoinationChnage(V, denominations) {
 }
 
 console.log(DenomoinationChnage(70, [1000, 500, 100, 50, 20, 10, 5, 2, 1]));
-
-
-// for (let i = 0; i < denominations.length; i++) {
-//     let coin = denominations[i];
-//     result[coin] = Math.floor(V / coin);
-//     V = V % coin;
-// }
-// return result;
