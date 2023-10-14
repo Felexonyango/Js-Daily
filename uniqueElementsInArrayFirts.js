@@ -4,7 +4,7 @@ function solution(A) {
   for (let i = 0; i < A.length; i++) {
     const currentValue = A[i];
 
-    // Check if the current value has been encountered before
+  
     if (occurrenceCount[currentValue] === undefined) {
       occurrenceCount[currentValue] = i; // Store the position of the unique number
     } else {
