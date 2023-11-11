@@ -14,18 +14,20 @@ function containDuplicate(nums){
 console.log(containDuplicate([1,2,3,3]))
 
 
-function containDuplicates(nums){
-    let result={}
-    for(let i=0;i<nums.length;i++){
-        if(result.includes(nums[i])){
-            return true
-        }
-        else {
-           return false  //it adds current element to result  to map if it does not exist
-        }
-    }
-    
-}
+var containsDuplicate = function(nums) {
+    let  hasmap =new Map()
+  for(let i=0;i<nums.length;i++){
+      if(hasmap.has(nums[i])){
+          return true
+      }
+      else {
+          hasmap.set(nums[i],true)  
+      }
+  }
+  return false
+};
+
+
 console.log(containDuplicate([1,2,3,3]))
 // Duplicate 11
 

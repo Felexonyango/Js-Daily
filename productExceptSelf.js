@@ -1,0 +1,3 @@
+var productExceptSelf = function(nums) {
+    
+};

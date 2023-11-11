@@ -35,29 +35,33 @@
   
  
 function solution(A, B) {
-    if (A.length !== B.length) {
-      return -1; // Return a special value to indicate an error
-    }
-  
-    const n = A.length;
-  
-    for (let i = 0; i < n; i++) {
-      let isSatisfied = true;
-  
-      for (let j = 0; j < n; j++) {
-        if (A[j] === B[(j + i) % n]) {
-          isSatisfied = false;
-          break;
-        }
-      }
-  
-      if (isSatisfied) {
-        return i-1;
-      }
-    }
-  
-    return -1; // If no rotations satisfy everyone
+  if (A.length !== B.length) {
+    return -1;
   }
+
+  const n = A.length;
+
+  for (let i = 0; i < n; i++) {
+    let isSatisfied = true;
+    let rotations = i;  // Initialize with the current rotation count
+
+    for (let j = 0; j < n; j++) {
+      if (A[j] === B[(j + i) % n]) {
+        console.log(rotations)
+        isSatisfied = false;
+        break;
+      }
+    }
+
+    if (isSatisfied) {
+      return rotations;
+    }
+  }
+
+  return -1;
+}
+
+
   
   console.log(solution([1, 3, 5, 2, 8, 7], [7, 1, 9, 8, 5, 7])); // Output should be 2
   

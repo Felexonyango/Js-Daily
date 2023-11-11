@@ -1,5 +1,5 @@
 function FindDifference(s, t) {
-  let arrayT = t.split("").sort() //sorts converts string into sub arrays of strings  as [ 'a', 'b', 'c', 'd', 'e' ]
+  let arrayT = t.split("").sort() 
   let arrayS = s.split("").sort();
 
 

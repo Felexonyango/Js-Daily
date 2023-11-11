@@ -1,9 +1,6 @@
 
 
 function  collatz(number){
-    number = number ? number : document.getElementById("Input").value;
-    console.log(number)
-
     let result =number;
 
   if(number %2 ===0){

@@ -9,4 +9,4 @@ const fibonacci = (n) => {
   return fib[n];
 };
 console.log(fibonacci(6)); 
-console.log(fibonacci(9));
+//console.log(fibonacci(9));
