@@ -13,22 +13,6 @@ function containDuplicate(nums){
 }
 console.log(containDuplicate([1,2,3,3]))
 
-
-var containsDuplicate = function(nums) {
-    let  hasmap =new Map()
-  for(let i=0;i<nums.length;i++){
-      if(hasmap.has(nums[i])){
-          return true
-      }
-      else {
-          hasmap.set(nums[i],true)  
-      }
-  }
-  return false
-};
-
-
-console.log(containDuplicate([1,2,3,3]))
 // Duplicate 11
 
 var containsNearbyDuplicate = function(nums, k) {

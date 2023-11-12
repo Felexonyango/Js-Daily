@@ -35,3 +35,26 @@ function SearchInRotatedArray(nums, target) {
 }
 
 console.log(SearchInRotatedArray([4,5,6,7,0,1,2],0))
+
+var search = function(nums, target) {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+    const value = nums[mid];
+
+    if (value === target) {
+      return mid;
+    }
+
+    if ((nums[left] <= value && target >= nums[left] && target <= value) ||
+        (nums[left] > value && (target >= nums[left] || target <= value))) {
+      right = mid - 1;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  return -1;
+};
