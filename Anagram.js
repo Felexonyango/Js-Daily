@@ -1,5 +1,6 @@
 function checkIfAnagram(s1, s2) {
   let a = s1.split("").sort().join();
+ 
   let b = s2.split("").sort().join();
 
   a === b ? console.log("true") : console.log("false");
@@ -40,3 +41,20 @@ function GroupAnagrams(words) {
 }
 console.log(GroupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
 
+
+
+var isAnagram = function(s, t) {
+  const arrayedT =t.split("").sort().join("");
+  const arrayedS = s.split("").sort().join('')
+  if(arrayedT===arrayedS){
+    return true
+  }
+  else{
+    return false
+  }
+
+  
+
+
+};
+console.log(isAnagram("rat","cat"))

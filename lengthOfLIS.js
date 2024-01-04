@@ -1,4 +1,4 @@
-var lengthOfLIS = function(nums) {
+var lengthOfLongestIncreasingSubsquence = function(nums) {
     if (nums.length === 0) {
       return 0;
     }
