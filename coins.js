@@ -3,16 +3,17 @@
 //The task is to find the minimum number of coins and/or notes needed to make the change?
 
 
-function DenomoinationChnage(V, denominations) {
-    let res = {};  // stores the number of coins  of each denominator
-    let i =0;
-    while(i<denominations.length){
-        let coin = denominations[i];
-        res[coin] = Math.floor(V / coin);
-        V = V % coin;
-        i++
-    }
-    return res;
-}
 
-console.log(DenomoinationChnage(70, [1000, 500, 100, 50, 20, 10, 5, 2, 1]));
+const denominationsChange =(amount,denominations) => {
+    let result = {};
+    for (let coin of denominations){
+        let coinCount = Math.floor(amount/coin)
+        if(coinCount>0){
+            result[coin] = coinCount
+        }
+     amount-= coinCount*coin
+  
+    }
+    return result;
+}
+console.log(denominationsChange(70, [1000, 500, 100, 50, 20, 10, 5, 2, 1]));

@@ -8,8 +8,8 @@ var addDigits = function(num) {
      const data=  num.toString().split('').map(Number)
     for(let i=0; i<data.length; i++){
          const resultObj= data[i]
+         console.log(resultObj,'result')
          sum += resultObj
-
        
     }
     return  addDigits(sum);
